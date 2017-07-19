@@ -33,12 +33,6 @@ namespace mitienda.Controllers
 
         }
 
-       // public ActionResult Producto( String id)
-        //{
-            
-
-       //    ViewBag.producto = id;
-         //   return View();
-        //}
+      
     }
 }
