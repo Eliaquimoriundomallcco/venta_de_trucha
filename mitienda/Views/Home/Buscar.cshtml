@@ -1,0 +1,53 @@
+﻿@model List<mitienda.Models.Producto>
+
+
+	<!--start-product-->
+
+
+<div class="product">
+    <div class="container">
+        <div class="product-main">
+            <div class="col-md-9 p-left">
+                <div class="product-one">
+
+                    <h4> Resusltado : &quot; @ViewBag.buscar &quot;</h4>
+
+                    @foreach (var item in Model)
+                    {
+
+                        var imagen = @item.ProductoImagen.FirstOrDefault();
+                        string img = imagen == null ? "no_disponible.jpg" : imagen.Imagen;
+
+
+
+                        <div class="col-md-4 product-left single-left">
+                            <div class="p-one simpleCart_shelfItem">
+
+                                <a href="single.html">
+                                    <img src="~/ImgProductos/@img" alt="" />
+                                    <div class="mask mask1 center-block">
+                                        <span class="text-center">Vista Previa</span>
+                                        <h6> <br><br /> </h6>
+                                        <span> 1 KG</span>
+                                    </div>
+                                </a>
+                                <h4> @item.Denominacion</h4>
+                                <p><a class="item_add" href="#"><i></i> <span class="item_price"> S/. @item.Precio </span></a></p>
+                            </div>
+                        </div>
+
+
+
+                    }
+    
+
+
+                   
+                </div>
+            </div>
+
+     
+        </div>
+    </div>
+</div>
+<!--end-product-->
